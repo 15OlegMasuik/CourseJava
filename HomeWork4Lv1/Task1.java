@@ -1,18 +1,26 @@
 package gmail.olegmasiuk;
-/**С помощью циклов нарисовать «обои». Причем количество полос
-должно вводиться с клавиатуры. В примере 7 полос.
-*/
+
 import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int n=sc.nextInt();
+        int n = sc.nextInt();
+        int m = sc.nextInt();
 
-        for(int i=0;i<n;i++){
-            System.out.println("***+++***+++***+++***");
+        for (int i = 0; i < n; i++) {
+
+            for (int j = 0; j < m; j++) {
+                if (j % 2 != 0) {
+                    System.out.print("+++");
+                } else {
+                    System.out.print("***");
+                }
+
             }
-
+            System.out.println();
+        }
+        sc.close();
     }
 }
